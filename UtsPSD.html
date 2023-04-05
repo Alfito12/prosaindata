@@ -8,7 +8,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Import dataset &#8212; Alfito Wahyu Kamaly</title>
+    <title>UTS &#8212; Alfito Wahyu Kamaly</title>
   
   
   
@@ -156,8 +156,7 @@ const thebe_selector_output = ".output, .cell_output"
         </ul>
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">TUGAS</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Import dataset</a></li>
-
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">UTS</a></li>
 </ul>
 
     </div>
@@ -341,7 +340,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Import dataset</h1>
+    <h1>UTS</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -351,10 +350,18 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Import dataset</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#case-folding">Case Folding</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#import-dataset">Import dataset</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#case-folding">Case Folding</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cleansing">Cleansing</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#slank-word">Slank word</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#steaming">Steaming</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tokenizing-dan-stop-words">Tokenizing dan Stop Words</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tf-idf">TF IDF</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pca">PCA</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#split-data">Split data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pemodelan-knn">Pemodelan KNN</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pemodelan-naive-bayes">Pemodelan Naive Bayes</a></li>
 </ul>
-
             </nav>
         </div>
     </div>
@@ -365,8 +372,10 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <div class="section" id="import-dataset">
-<h1>Import dataset<a class="headerlink" href="#import-dataset" title="Permalink to this heading">#</a></h1>
+  <div class="section" id="uts">
+<h1>UTS<a class="headerlink" href="#uts" title="Permalink to this heading">#</a></h1>
+<div class="section" id="import-dataset">
+<h2>Import dataset<a class="headerlink" href="#import-dataset" title="Permalink to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
@@ -385,7 +394,7 @@ document.write(`
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-b608f6ad-09b0-4a20-9dc8-374ef32a8b70">
+  <div id="df-5276762c-2b73-4c23-a7f0-7a93230b9e39">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -481,7 +490,7 @@ document.write(`
 </table>
 <p>805 rows × 3 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-b608f6ad-09b0-4a20-9dc8-374ef32a8b70')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-5276762c-2b73-4c23-a7f0-7a93230b9e39')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
         
@@ -532,12 +541,12 @@ document.write(`
 
       <script>
         const buttonEl =
-          document.querySelector('#df-b608f6ad-09b0-4a20-9dc8-374ef32a8b70 button.colab-df-convert');
+          document.querySelector('#df-5276762c-2b73-4c23-a7f0-7a93230b9e39 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-b608f6ad-09b0-4a20-9dc8-374ef32a8b70');
+          const element = document.querySelector('#df-5276762c-2b73-4c23-a7f0-7a93230b9e39');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -560,7 +569,7 @@ document.write(`
 </div>
 </div>
 <div class="section" id="case-folding">
-<h1>Case Folding<a class="headerlink" href="#case-folding" title="Permalink to this heading">#</a></h1>
+<h2>Case Folding<a class="headerlink" href="#case-folding" title="Permalink to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">case_folding_abstrak</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;Abstrak&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
@@ -572,7 +581,7 @@ document.write(`
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-8835aa9e-7096-495f-9d05-56b749d85880">
+  <div id="df-af2515d1-5adc-49af-8aeb-f63b7156638a">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -644,7 +653,7 @@ document.write(`
 </table>
 <p>805 rows × 1 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-8835aa9e-7096-495f-9d05-56b749d85880')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-af2515d1-5adc-49af-8aeb-f63b7156638a')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
         
@@ -695,12 +704,12 @@ document.write(`
 
       <script>
         const buttonEl =
-          document.querySelector('#df-8835aa9e-7096-495f-9d05-56b749d85880 button.colab-df-convert');
+          document.querySelector('#df-af2515d1-5adc-49af-8aeb-f63b7156638a button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-8835aa9e-7096-495f-9d05-56b749d85880');
+          const element = document.querySelector('#df-af2515d1-5adc-49af-8aeb-f63b7156638a');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -721,7 +730,9 @@ document.write(`
   </div>
   </div></div>
 </div>
-<p>##Cleansing</p>
+</div>
+<div class="section" id="cleansing">
+<h2>Cleansing<a class="headerlink" href="#cleansing" title="Permalink to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#cleaning</span>
@@ -743,7 +754,7 @@ document.write(`
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-1ea9ec87-2d98-4f60-b7b0-955f95a0c1c0">
+  <div id="df-380ef464-d6cb-4729-8d18-94c0c47190b5">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -815,7 +826,7 @@ document.write(`
 </table>
 <p>805 rows × 1 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-1ea9ec87-2d98-4f60-b7b0-955f95a0c1c0')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-380ef464-d6cb-4729-8d18-94c0c47190b5')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
         
@@ -866,12 +877,12 @@ document.write(`
 
       <script>
         const buttonEl =
-          document.querySelector('#df-1ea9ec87-2d98-4f60-b7b0-955f95a0c1c0 button.colab-df-convert');
+          document.querySelector('#df-380ef464-d6cb-4729-8d18-94c0c47190b5 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-1ea9ec87-2d98-4f60-b7b0-955f95a0c1c0');
+          const element = document.querySelector('#df-380ef464-d6cb-4729-8d18-94c0c47190b5');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -892,7 +903,9 @@ document.write(`
   </div>
   </div></div>
 </div>
-<p>##Slank word</p>
+</div>
+<div class="section" id="slank-word">
+<h2>Slank word<a class="headerlink" href="#slank-word" title="Permalink to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">nltk</span>
@@ -905,9 +918,9 @@ document.write(`
 </div>
 <div class="cell_output docutils container">
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[nltk_data] Downloading package stopwords to /root/nltk_data...
-[nltk_data]   Unzipping corpora/stopwords.zip.
+[nltk_data]   Package stopwords is already up-to-date!
 [nltk_data] Downloading package punkt to /root/nltk_data...
-[nltk_data]   Unzipping tokenizers/punkt.zip.
+[nltk_data]   Package punkt is already up-to-date!
 </pre></div>
 </div>
 </div>
@@ -962,25 +975,55 @@ document.write(`
 <span class="g g-Whitespace">      </span><span class="mi">9</span>         <span class="k">if</span> <span class="n">words_filtered</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="ow">in</span> <span class="n">slang_dict</span><span class="p">:</span>
 
 <span class="nn">/usr/local/lib/python3.9/dist-packages/nltk/corpus/reader/wordlist.py</span> in <span class="ni">words</span><span class="nt">(self, fileids, ignore_lines_startswith)</span>
-<span class="g g-Whitespace">     </span><span class="mi">17</span> 
-<span class="g g-Whitespace">     </span><span class="mi">18</span>     <span class="k">def</span> <span class="nf">words</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fileids</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">ignore_lines_startswith</span><span class="o">=</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">):</span>
-<span class="ne">---&gt; </span><span class="mi">19</span>         <span class="k">return</span> <span class="p">[</span>
+<span class="g g-Whitespace">     </span><span class="mi">19</span>         <span class="k">return</span> <span class="p">[</span>
 <span class="g g-Whitespace">     </span><span class="mi">20</span>             <span class="n">line</span>
-<span class="nn">     21             for line</span> in <span class="ni">line_tokenize(self.raw</span><span class="nt">(fileids))</span>
-
-<span class="nn">/usr/local/lib/python3.9/dist-packages/nltk/corpus/reader/wordlist.py</span> in <span class="ni">&lt;listcomp&gt;</span><span class="nt">(.0)</span>
-<span class="g g-Whitespace">     </span><span class="mi">20</span>             <span class="n">line</span>
-<span class="nn">     21             for line</span> in <span class="ni">line_tokenize(self.raw</span><span class="nt">(fileids))</span>
-<span class="ne">---&gt; </span><span class="mi">22</span>             <span class="k">if</span> <span class="ow">not</span> <span class="n">line</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="n">ignore_lines_startswith</span><span class="p">)</span>
+<span class="nn">---&gt; 21             for line</span> in <span class="ni">line_tokenize(self.raw</span><span class="nt">(fileids))</span>
+<span class="g g-Whitespace">     </span><span class="mi">22</span>             <span class="k">if</span> <span class="ow">not</span> <span class="n">line</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="n">ignore_lines_startswith</span><span class="p">)</span>
 <span class="g g-Whitespace">     </span><span class="mi">23</span>         <span class="p">]</span>
-<span class="g g-Whitespace">     </span><span class="mi">24</span> 
+
+<span class="nn">/usr/local/lib/python3.9/dist-packages/nltk/corpus/reader/api.py</span> in <span class="ni">raw</span><span class="nt">(self, fileids)</span>
+<span class="g g-Whitespace">    </span><span class="mi">216</span>         <span class="n">contents</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="g g-Whitespace">    </span><span class="mi">217</span>         <span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="n">fileids</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">218</span>             <span class="k">with</span> <span class="bp">self</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">f</span><span class="p">)</span> <span class="k">as</span> <span class="n">fp</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">219</span>                 <span class="n">contents</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">fp</span><span class="o">.</span><span class="n">read</span><span class="p">())</span>
+<span class="g g-Whitespace">    </span><span class="mi">220</span>         <span class="k">return</span> <span class="n">concat</span><span class="p">(</span><span class="n">contents</span><span class="p">)</span>
+
+<span class="nn">/usr/local/lib/python3.9/dist-packages/nltk/corpus/reader/api.py</span> in <span class="ni">open</span><span class="nt">(self, file)</span>
+<span class="g g-Whitespace">    </span><span class="mi">229</span><span class="w">         </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="g g-Whitespace">    </span><span class="mi">230</span><span class="sd">         encoding = self.encoding(file)</span>
+<span class="ne">--&gt; </span><span class="mi">231</span><span class="sd">         stream = self._root.join(file).open(encoding)</span>
+<span class="g g-Whitespace">    </span><span class="mi">232</span><span class="sd">         return stream</span>
+<span class="g g-Whitespace">    </span><span class="mi">233</span><span class="sd"> </span>
+
+<span class="nn">/usr/local/lib/python3.9/dist-packages/nltk/data.py</span> in <span class="ni">open</span><span class="nt">(self, encoding)</span>
+<span class="g g-Whitespace">    </span><span class="mi">324</span><span class="sd">         stream = open(self._path, &quot;rb&quot;)</span>
+<span class="g g-Whitespace">    </span><span class="mi">325</span><span class="sd">         if encoding is not None:</span>
+<span class="ne">--&gt; </span><span class="mi">326</span><span class="sd">             stream = SeekableUnicodeStreamReader(stream, encoding)</span>
+<span class="g g-Whitespace">    </span><span class="mi">327</span><span class="sd">         return stream</span>
+<span class="g g-Whitespace">    </span><span class="mi">328</span><span class="sd"> </span>
+
+<span class="nn">/usr/local/lib/python3.9/dist-packages/nltk/compat.py</span> in <span class="ni">_decorator</span><span class="nt">(*args, **kwargs)</span>
+<span class="g g-Whitespace">     </span><span class="mi">39</span><span class="sd">     def _decorator(*args, **kwargs):</span>
+<span class="g g-Whitespace">     </span><span class="mi">40</span><span class="sd">         args = (args[0], add_py3_data(args[1])) + args[2:]</span>
+<span class="ne">---&gt; </span><span class="mi">41</span><span class="sd">         return init_func(*args, **kwargs)</span>
+<span class="g g-Whitespace">     </span><span class="mi">42</span><span class="sd"> </span>
+<span class="g g-Whitespace">     </span><span class="mi">43</span><span class="sd">     return wraps(init_func)(_decorator)</span>
+
+<span class="nn">/usr/local/lib/python3.9/dist-packages/nltk/data.py</span> in <span class="ni">__init__</span><span class="nt">(self, stream, encoding, errors)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1003</span><span class="sd">            &#39;replace&#39;.&quot;&quot;&quot;</span>
+<span class="g g-Whitespace">   </span><span class="mi">1004</span> 
+<span class="ne">-&gt; </span><span class="mi">1005</span>         <span class="bp">self</span><span class="o">.</span><span class="n">decode</span> <span class="o">=</span> <span class="n">codecs</span><span class="o">.</span><span class="n">getdecoder</span><span class="p">(</span><span class="n">encoding</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1006</span><span class="w">         </span><span class="sd">&quot;&quot;&quot;The function that is used to decode byte strings into</span>
+<span class="g g-Whitespace">   </span><span class="mi">1007</span><span class="sd">            unicode strings.&quot;&quot;&quot;</span>
 
 <span class="ne">KeyboardInterrupt</span>: 
 </pre></div>
 </div>
 </div>
 </div>
-<p>##Steaming</p>
+</div>
+<div class="section" id="steaming">
+<h2>Steaming<a class="headerlink" href="#steaming" title="Permalink to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">sastrawi</span>
@@ -1167,7 +1210,9 @@ Successfully installed sastrawi-1.0.1
   </div>
   </div></div>
 </div>
-<p>##Tokenizing dan Stop Words</p>
+</div>
+<div class="section" id="tokenizing-dan-stop-words">
+<h2>Tokenizing dan Stop Words<a class="headerlink" href="#tokenizing-dan-stop-words" title="Permalink to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">words</span> <span class="o">=</span> <span class="p">[]</span>
@@ -2170,7 +2215,9 @@ Successfully installed sastrawi-1.0.1
 </div>
 </div>
 </div>
-<p>##TF IDF</p>
+</div>
+<div class="section" id="tf-idf">
+<h2>TF IDF<a class="headerlink" href="#tf-idf" title="Permalink to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># TfidfVectorizer </span>
@@ -2996,7 +3043,9 @@ Successfully installed sastrawi-1.0.1
   </div>
   </div></div>
 </div>
-<p>##PCA</p>
+</div>
+<div class="section" id="pca">
+<h2>PCA<a class="headerlink" href="#pca" title="Permalink to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.decomposition</span> <span class="kn">import</span> <span class="n">PCA</span>
@@ -3398,7 +3447,9 @@ Successfully installed sastrawi-1.0.1
   </div>
   </div></div>
 </div>
-<p>##Split data</p>
+</div>
+<div class="section" id="split-data">
+<h2>Split data<a class="headerlink" href="#split-data" title="Permalink to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
@@ -3408,7 +3459,9 @@ Successfully installed sastrawi-1.0.1
 </div>
 </div>
 </div>
-<p>##Pemodelan KNN</p>
+</div>
+<div class="section" id="pemodelan-knn">
+<h2>Pemodelan KNN<a class="headerlink" href="#pemodelan-knn" title="Permalink to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.neighbors</span> <span class="kn">import</span> <span class="n">KNeighborsClassifier</span>
@@ -3496,7 +3549,9 @@ weighted avg       0.83      0.83      0.83       161
 </div>
 </div>
 </div>
-<p>##Pemodelan Naive Bayes</p>
+</div>
+<div class="section" id="pemodelan-naive-bayes">
+<h2>Pemodelan Naive Bayes<a class="headerlink" href="#pemodelan-naive-bayes" title="Permalink to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Model Select</span>
@@ -3583,6 +3638,7 @@ weighted avg       0.85      0.80      0.81       161
 </div>
 </div>
 </div>
+</div>
 
     <script type="text/x-thebe-config">
     {
@@ -3642,10 +3698,18 @@ weighted avg       0.85      0.80      0.81       161
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Import dataset</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#case-folding">Case Folding</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#import-dataset">Import dataset</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#case-folding">Case Folding</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cleansing">Cleansing</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#slank-word">Slank word</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#steaming">Steaming</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tokenizing-dan-stop-words">Tokenizing dan Stop Words</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tf-idf">TF IDF</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pca">PCA</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#split-data">Split data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pemodelan-knn">Pemodelan KNN</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pemodelan-naive-bayes">Pemodelan Naive Bayes</a></li>
 </ul>
-
   </nav></div>
 
 </div></div>
