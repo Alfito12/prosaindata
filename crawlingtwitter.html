@@ -157,6 +157,7 @@ const thebe_selector_output = ".output, .cell_output"
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">TUGAS</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="UtsPSD.html">UTS</a></li>
+
 <li class="toctree-l1"><a class="reference internal" href="crawlingberita.html">Crawling data Website Berita</a></li>
 <li class="toctree-l1"><a class="reference internal" href="crawlingpta.html">Crawling data Website https://pta.trunojoyo.ac.id/</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">CRAWLING TWITTER</a></li>
@@ -372,16 +373,16 @@ document.write(`
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting snscrape
   Downloading snscrape-0.6.2.20230320-py3-none-any.whl (71 kB)
 ?25l     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.0/71.8 KB</span> <span class=" -Color -Color-Red">?</span> eta <span class=" -Color -Color-Cyan">-:--:--</span>
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">71.8/71.8 KB</span> <span class=" -Color -Color-Red">4.5 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
-?25hRequirement already satisfied: lxml in /usr/local/lib/python3.9/dist-packages (from snscrape) (4.9.2)
-Requirement already satisfied: beautifulsoup4 in /usr/local/lib/python3.9/dist-packages (from snscrape) (4.11.2)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">71.8/71.8 KB</span> <span class=" -Color -Color-Red">3.2 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+?25hRequirement already satisfied: beautifulsoup4 in /usr/local/lib/python3.9/dist-packages (from snscrape) (4.11.2)
+Requirement already satisfied: lxml in /usr/local/lib/python3.9/dist-packages (from snscrape) (4.9.2)
 Requirement already satisfied: filelock in /usr/local/lib/python3.9/dist-packages (from snscrape) (3.10.7)
 Requirement already satisfied: requests[socks] in /usr/local/lib/python3.9/dist-packages (from snscrape) (2.27.1)
 Requirement already satisfied: soupsieve&gt;1.2 in /usr/local/lib/python3.9/dist-packages (from beautifulsoup4-&gt;snscrape) (2.4)
-Requirement already satisfied: charset-normalizer~=2.0.0 in /usr/local/lib/python3.9/dist-packages (from requests[socks]-&gt;snscrape) (2.0.12)
+Requirement already satisfied: urllib3&lt;1.27,&gt;=1.21.1 in /usr/local/lib/python3.9/dist-packages (from requests[socks]-&gt;snscrape) (1.26.15)
 Requirement already satisfied: certifi&gt;=2017.4.17 in /usr/local/lib/python3.9/dist-packages (from requests[socks]-&gt;snscrape) (2022.12.7)
 Requirement already satisfied: idna&lt;4,&gt;=2.5 in /usr/local/lib/python3.9/dist-packages (from requests[socks]-&gt;snscrape) (3.4)
-Requirement already satisfied: urllib3&lt;1.27,&gt;=1.21.1 in /usr/local/lib/python3.9/dist-packages (from requests[socks]-&gt;snscrape) (1.26.15)
+Requirement already satisfied: charset-normalizer~=2.0.0 in /usr/local/lib/python3.9/dist-packages (from requests[socks]-&gt;snscrape) (2.0.12)
 Requirement already satisfied: PySocks!=1.5.7,&gt;=1.5.6 in /usr/local/lib/python3.9/dist-packages (from requests[socks]-&gt;snscrape) (1.7.1)
 </pre></div>
 </div>
@@ -395,61 +396,59 @@ Requirement already satisfied: tqdm in /usr/local/lib/python3.9/dist-packages (4
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Looking in indexes: https://pypi.org/simple, https://us-python.pkg.dev/colab-wheels/public/simple/
 Requirement already satisfied: ipywidgets in /usr/local/lib/python3.9/dist-packages (7.7.1)
-Requirement already satisfied: jupyterlab-widgets&gt;=1.0.0 in /usr/local/lib/python3.9/dist-packages (from ipywidgets) (3.0.7)
-Requirement already satisfied: traitlets&gt;=4.3.1 in /usr/local/lib/python3.9/dist-packages (from ipywidgets) (5.7.1)
-Requirement already satisfied: ipython&gt;=4.0.0 in /usr/local/lib/python3.9/dist-packages (from ipywidgets) (7.34.0)
 Requirement already satisfied: widgetsnbextension~=3.6.0 in /usr/local/lib/python3.9/dist-packages (from ipywidgets) (3.6.4)
+Requirement already satisfied: traitlets&gt;=4.3.1 in /usr/local/lib/python3.9/dist-packages (from ipywidgets) (5.7.1)
+Requirement already satisfied: jupyterlab-widgets&gt;=1.0.0 in /usr/local/lib/python3.9/dist-packages (from ipywidgets) (3.0.7)
 Requirement already satisfied: ipython-genutils~=0.2.0 in /usr/local/lib/python3.9/dist-packages (from ipywidgets) (0.2.0)
+Requirement already satisfied: ipython&gt;=4.0.0 in /usr/local/lib/python3.9/dist-packages (from ipywidgets) (7.34.0)
 Requirement already satisfied: ipykernel&gt;=4.5.1 in /usr/local/lib/python3.9/dist-packages (from ipywidgets) (5.5.6)
-Requirement already satisfied: jupyter-client in /usr/local/lib/python3.9/dist-packages (from ipykernel&gt;=4.5.1-&gt;ipywidgets) (6.1.12)
 Requirement already satisfied: tornado&gt;=4.2 in /usr/local/lib/python3.9/dist-packages (from ipykernel&gt;=4.5.1-&gt;ipywidgets) (6.2)
-Requirement already satisfied: backcall in /usr/local/lib/python3.9/dist-packages (from ipython&gt;=4.0.0-&gt;ipywidgets) (0.2.0)
-Requirement already satisfied: pexpect&gt;4.3 in /usr/local/lib/python3.9/dist-packages (from ipython&gt;=4.0.0-&gt;ipywidgets) (4.8.0)
+Requirement already satisfied: jupyter-client in /usr/local/lib/python3.9/dist-packages (from ipykernel&gt;=4.5.1-&gt;ipywidgets) (6.1.12)
 Requirement already satisfied: pickleshare in /usr/local/lib/python3.9/dist-packages (from ipython&gt;=4.0.0-&gt;ipywidgets) (0.7.5)
 Requirement already satisfied: pygments in /usr/local/lib/python3.9/dist-packages (from ipython&gt;=4.0.0-&gt;ipywidgets) (2.14.0)
 Requirement already satisfied: jedi&gt;=0.16 in /usr/local/lib/python3.9/dist-packages (from ipython&gt;=4.0.0-&gt;ipywidgets) (0.18.2)
-Requirement already satisfied: decorator in /usr/local/lib/python3.9/dist-packages (from ipython&gt;=4.0.0-&gt;ipywidgets) (4.4.2)
-Requirement already satisfied: setuptools&gt;=18.5 in /usr/local/lib/python3.9/dist-packages (from ipython&gt;=4.0.0-&gt;ipywidgets) (67.6.1)
 Requirement already satisfied: matplotlib-inline in /usr/local/lib/python3.9/dist-packages (from ipython&gt;=4.0.0-&gt;ipywidgets) (0.1.6)
+Requirement already satisfied: pexpect&gt;4.3 in /usr/local/lib/python3.9/dist-packages (from ipython&gt;=4.0.0-&gt;ipywidgets) (4.8.0)
+Requirement already satisfied: decorator in /usr/local/lib/python3.9/dist-packages (from ipython&gt;=4.0.0-&gt;ipywidgets) (4.4.2)
+Requirement already satisfied: backcall in /usr/local/lib/python3.9/dist-packages (from ipython&gt;=4.0.0-&gt;ipywidgets) (0.2.0)
 Requirement already satisfied: prompt-toolkit!=3.0.0,!=3.0.1,&lt;3.1.0,&gt;=2.0.0 in /usr/local/lib/python3.9/dist-packages (from ipython&gt;=4.0.0-&gt;ipywidgets) (3.0.38)
+Requirement already satisfied: setuptools&gt;=18.5 in /usr/local/lib/python3.9/dist-packages (from ipython&gt;=4.0.0-&gt;ipywidgets) (67.6.1)
 Requirement already satisfied: notebook&gt;=4.4.1 in /usr/local/lib/python3.9/dist-packages (from widgetsnbextension~=3.6.0-&gt;ipywidgets) (6.4.8)
 Requirement already satisfied: parso&lt;0.9.0,&gt;=0.8.0 in /usr/local/lib/python3.9/dist-packages (from jedi&gt;=0.16-&gt;ipython&gt;=4.0.0-&gt;ipywidgets) (0.8.3)
-Requirement already satisfied: pyzmq&gt;=17 in /usr/local/lib/python3.9/dist-packages (from notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets) (23.2.1)
-Requirement already satisfied: Send2Trash&gt;=1.8.0 in /usr/local/lib/python3.9/dist-packages (from notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets) (1.8.0)
-Requirement already satisfied: argon2-cffi in /usr/local/lib/python3.9/dist-packages (from notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets) (21.3.0)
+Requirement already satisfied: prometheus-client in /usr/local/lib/python3.9/dist-packages (from notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets) (0.16.0)
 Requirement already satisfied: jinja2 in /usr/local/lib/python3.9/dist-packages (from notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets) (3.1.2)
 Requirement already satisfied: terminado&gt;=0.8.3 in /usr/local/lib/python3.9/dist-packages (from notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets) (0.17.1)
+Requirement already satisfied: nest-asyncio&gt;=1.5 in /usr/local/lib/python3.9/dist-packages (from notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets) (1.5.6)
 Requirement already satisfied: nbformat in /usr/local/lib/python3.9/dist-packages (from notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets) (5.8.0)
 Requirement already satisfied: nbconvert in /usr/local/lib/python3.9/dist-packages (from notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets) (6.5.4)
+Requirement already satisfied: Send2Trash&gt;=1.8.0 in /usr/local/lib/python3.9/dist-packages (from notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets) (1.8.0)
+Requirement already satisfied: argon2-cffi in /usr/local/lib/python3.9/dist-packages (from notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets) (21.3.0)
+Requirement already satisfied: pyzmq&gt;=17 in /usr/local/lib/python3.9/dist-packages (from notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets) (23.2.1)
 Requirement already satisfied: jupyter-core&gt;=4.6.1 in /usr/local/lib/python3.9/dist-packages (from notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets) (5.3.0)
-Requirement already satisfied: prometheus-client in /usr/local/lib/python3.9/dist-packages (from notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets) (0.16.0)
-Requirement already satisfied: nest-asyncio&gt;=1.5 in /usr/local/lib/python3.9/dist-packages (from notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets) (1.5.6)
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: python-dateutil&gt;=2.1 in /usr/local/lib/python3.9/dist-packages (from jupyter-client-&gt;ipykernel&gt;=4.5.1-&gt;ipywidgets) (2.8.2)
+Requirement already satisfied: python-dateutil&gt;=2.1 in /usr/local/lib/python3.9/dist-packages (from jupyter-client-&gt;ipykernel&gt;=4.5.1-&gt;ipywidgets) (2.8.2)
 Requirement already satisfied: ptyprocess&gt;=0.5 in /usr/local/lib/python3.9/dist-packages (from pexpect&gt;4.3-&gt;ipython&gt;=4.0.0-&gt;ipywidgets) (0.7.0)
 Requirement already satisfied: wcwidth in /usr/local/lib/python3.9/dist-packages (from prompt-toolkit!=3.0.0,!=3.0.1,&lt;3.1.0,&gt;=2.0.0-&gt;ipython&gt;=4.0.0-&gt;ipywidgets) (0.2.6)
 Requirement already satisfied: platformdirs&gt;=2.5 in /usr/local/lib/python3.9/dist-packages (from jupyter-core&gt;=4.6.1-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets) (3.2.0)
-Requirement already satisfied: six&gt;=1.5 in /usr/local/lib/python3.9/dist-packages (from python-dateutil&gt;=2.1-&gt;jupyter-client-&gt;ipykernel&gt;=4.5.1-&gt;ipywidgets) (1.16.0)
-Requirement already satisfied: argon2-cffi-bindings in /usr/local/lib/python3.9/dist-packages (from argon2-cffi-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets) (21.2.0)
-Requirement already satisfied: MarkupSafe&gt;=2.0 in /usr/local/lib/python3.9/dist-packages (from jinja2-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets) (2.1.2)
-Requirement already satisfied: jupyterlab-pygments in /usr/local/lib/python3.9/dist-packages (from nbconvert-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets) (0.2.2)
-Requirement already satisfied: bleach in /usr/local/lib/python3.9/dist-packages (from nbconvert-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets) (6.0.0)
-Requirement already satisfied: pandocfilters&gt;=1.4.1 in /usr/local/lib/python3.9/dist-packages (from nbconvert-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets) (1.5.0)
-Requirement already satisfied: packaging in /usr/local/lib/python3.9/dist-packages (from nbconvert-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets) (23.0)
-Requirement already satisfied: defusedxml in /usr/local/lib/python3.9/dist-packages (from nbconvert-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets) (0.7.1)
-Requirement already satisfied: mistune&lt;2,&gt;=0.8.1 in /usr/local/lib/python3.9/dist-packages (from nbconvert-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets) (0.8.4)
-Requirement already satisfied: nbclient&gt;=0.5.0 in /usr/local/lib/python3.9/dist-packages (from nbconvert-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets) (0.5.13)
-Requirement already satisfied: entrypoints&gt;=0.2.2 in /usr/local/lib/python3.9/dist-packages (from nbconvert-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets) (0.4)
-Requirement already satisfied: tinycss2 in /usr/local/lib/python3.9/dist-packages (from nbconvert-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets) (1.2.1)
-Requirement already satisfied: beautifulsoup4 in /usr/local/lib/python3.9/dist-packages (from nbconvert-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets) (4.11.2)
-Requirement already satisfied: lxml in /usr/local/lib/python3.9/dist-packages (from nbconvert-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets) (4.9.2)
-Requirement already satisfied: jsonschema&gt;=2.6 in /usr/local/lib/python3.9/dist-packages (from nbformat-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets) (4.3.3)
-Requirement already satisfied: fastjsonschema in /usr/local/lib/python3.9/dist-packages (from nbformat-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets) (2.16.3)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: pyrsistent!=0.17.0,!=0.17.1,!=0.17.2,&gt;=0.14.0 in /usr/local/lib/python3.9/dist-packages (from jsonschema&gt;=2.6-&gt;nbformat-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets) (0.19.3)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: six&gt;=1.5 in /usr/local/lib/python3.9/dist-packages (from python-dateutil&gt;=2.1-&gt;jupyter-client-&gt;ipykernel&gt;=4.5.1-&gt;ipywidgets) (1.16.0)
+Requirement already satisfied: argon2-cffi-bindings in /usr/local/lib/python3.9/dist-packages (from argon2-cffi-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets) (21.2.0)
+Requirement already satisfied: MarkupSafe&gt;=2.0 in /usr/local/lib/python3.9/dist-packages (from jinja2-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets) (2.1.2)
+Requirement already satisfied: beautifulsoup4 in /usr/local/lib/python3.9/dist-packages (from nbconvert-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets) (4.11.2)
+Requirement already satisfied: lxml in /usr/local/lib/python3.9/dist-packages (from nbconvert-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets) (4.9.2)
+Requirement already satisfied: jupyterlab-pygments in /usr/local/lib/python3.9/dist-packages (from nbconvert-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets) (0.2.2)
+Requirement already satisfied: entrypoints&gt;=0.2.2 in /usr/local/lib/python3.9/dist-packages (from nbconvert-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets) (0.4)
+Requirement already satisfied: packaging in /usr/local/lib/python3.9/dist-packages (from nbconvert-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets) (23.0)
+Requirement already satisfied: pandocfilters&gt;=1.4.1 in /usr/local/lib/python3.9/dist-packages (from nbconvert-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets) (1.5.0)
+Requirement already satisfied: mistune&lt;2,&gt;=0.8.1 in /usr/local/lib/python3.9/dist-packages (from nbconvert-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets) (0.8.4)
+Requirement already satisfied: defusedxml in /usr/local/lib/python3.9/dist-packages (from nbconvert-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets) (0.7.1)
+Requirement already satisfied: nbclient&gt;=0.5.0 in /usr/local/lib/python3.9/dist-packages (from nbconvert-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets) (0.5.13)
+Requirement already satisfied: bleach in /usr/local/lib/python3.9/dist-packages (from nbconvert-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets) (6.0.0)
+Requirement already satisfied: tinycss2 in /usr/local/lib/python3.9/dist-packages (from nbconvert-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets) (1.2.1)
+Requirement already satisfied: fastjsonschema in /usr/local/lib/python3.9/dist-packages (from nbformat-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets) (2.16.3)
+Requirement already satisfied: jsonschema&gt;=2.6 in /usr/local/lib/python3.9/dist-packages (from nbformat-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets) (4.3.3)
 Requirement already satisfied: attrs&gt;=17.4.0 in /usr/local/lib/python3.9/dist-packages (from jsonschema&gt;=2.6-&gt;nbformat-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets) (22.2.0)
+Requirement already satisfied: pyrsistent!=0.17.0,!=0.17.1,!=0.17.2,&gt;=0.14.0 in /usr/local/lib/python3.9/dist-packages (from jsonschema&gt;=2.6-&gt;nbformat-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets) (0.19.3)
 Requirement already satisfied: cffi&gt;=1.0.1 in /usr/local/lib/python3.9/dist-packages (from argon2-cffi-bindings-&gt;argon2-cffi-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets) (1.15.1)
 Requirement already satisfied: soupsieve&gt;1.2 in /usr/local/lib/python3.9/dist-packages (from beautifulsoup4-&gt;nbconvert-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets) (2.4)
 Requirement already satisfied: webencodings in /usr/local/lib/python3.9/dist-packages (from bleach-&gt;nbconvert-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets) (0.5.1)
@@ -488,8 +487,8 @@ Requirement already satisfied: pycparser in /usr/local/lib/python3.9/dist-packag
 </div>
 </div>
 <div class="cell_output docutils container">
-<script type="application/vnd.jupyter.widget-view+json">{"version_major": 2, "version_minor": 0, "model_id": "5d1de8a6a80a44b3b518843a674cb19d"}</script><div class="output text_html">
-  <div id="df-5d263a64-eb0c-4728-ad70-a04a46ed2766">
+<script type="application/vnd.jupyter.widget-view+json">{"version_major": 2, "version_minor": 0, "model_id": "6857beb91bb144ca84cad5782f2e3378"}</script><div class="output text_html">
+  <div id="df-c99d647c-3ea2-41fd-a8c3-32a8d708b24b">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -517,33 +516,33 @@ Requirement already satisfied: pycparser in /usr/local/lib/python3.9/dist-packag
   <tbody>
     <tr>
       <th>0</th>
-      <td>JokoPintar2</td>
-      <td>@RealKebenaran @ilhampurnama887 Aki maruf bert...</td>
-      <td></td>
+      <td>opsimediatv</td>
+      <td>Sandiaga Uno Positif Pindah ke Partai Persatua...</td>
+      <td>Jl. Tebet Barat Dalam 1G No. 7</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>Beritasatu</td>
-      <td>Sandiaga Uno Disebut Positif Pindah ke PPP, Ta...</td>
-      <td>Jakarta</td>
+      <td>opsihukum</td>
+      <td>Sandiaga Uno Positif Pindah ke Partai Persatua...</td>
+      <td>Jl. Tebet Barat Dalam 1G No. 7</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>is_pelssy</td>
-      <td>Salut bang sandi berani keluar dari zona nyama...</td>
-      <td>Indonesia</td>
+      <td>detikcom</td>
+      <td>Wakil Ketua Dewan Pembina Partai Gerindra Sand...</td>
+      <td>Jakarta, Indonesia</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>AyuPenari</td>
-      <td>Sandiaga Uno Beri Santri Ponpes Nurul Huda Ast...</td>
-      <td>Semanu, Indonesia</td>
+      <td>CNNIDdaily</td>
+      <td>Ketua umum Partai Gerindra, Prabowo Subianto m...</td>
+      <td>Indonesia</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>mediabantencom</td>
-      <td>Hadapi Ancaman Resesi 2023, Ini Strategi Sandi...</td>
-      <td>Kota Serang, Provinsi Banten</td>
+      <td>Ajebah01</td>
+      <td>Sandiaga Uno hengkang, Prabowo santuy aja kykn...</td>
+      <td></td>
     </tr>
     <tr>
       <th>...</th>
@@ -553,39 +552,39 @@ Requirement already satisfied: pycparser in /usr/local/lib/python3.9/dist-packag
     </tr>
     <tr>
       <th>497</th>
-      <td>TiaraAnstsyaa</td>
-      <td>Habiburokhman mengungkapkan isi pertemuan Ketu...</td>
-      <td>Jakarta</td>
+      <td>tvOneNews</td>
+      <td>Gara-gara Batal Jadi Tuan Rumah Piala Dunia U2...</td>
+      <td>Pulo Gadung</td>
     </tr>
     <tr>
       <th>498</th>
-      <td>TiaraAnstsyaa</td>
-      <td>Prabowo Subianto Bertemu Sandiaga Uno di Kemha...</td>
-      <td>Jakarta</td>
+      <td>wjtodaycom</td>
+      <td>Batal Jadi Tuan Rumah Piala Dunia U-20 2023, S...</td>
+      <td>West Java, Indonesia</td>
     </tr>
     <tr>
       <th>499</th>
-      <td>ObengPlus759569</td>
-      <td>Berbeda dengan Eric Tohir Sandiaga Uno unggah ...</td>
-      <td></td>
+      <td>WaspadaOnline</td>
+      <td>Menteri Sandiaga Uno Bincang-bincang Seputar F...</td>
+      <td>Medan</td>
     </tr>
     <tr>
       <th>500</th>
-      <td>ObengPlus759569</td>
-      <td>Berbeda dengan Eric Tohir Sandiaga Uno unggah ...</td>
+      <td>kumparan</td>
+      <td>"Minimal dampaknya itu mencapai Rp 3,7 triliun...</td>
       <td></td>
     </tr>
     <tr>
       <th>501</th>
-      <td>TiaraAnstsyaa</td>
-      <td>Wakil Ketua Umum Partai Gerindra Habiburokhman...</td>
-      <td>Jakarta</td>
+      <td>linarchdoandrew</td>
+      <td>Makin kesini liat pak prabowo, sandiaga uno ko...</td>
+      <td>Jakarta, Indonesia.</td>
     </tr>
   </tbody>
 </table>
 <p>502 rows × 3 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-5d263a64-eb0c-4728-ad70-a04a46ed2766')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-c99d647c-3ea2-41fd-a8c3-32a8d708b24b')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
         
@@ -636,12 +635,12 @@ Requirement already satisfied: pycparser in /usr/local/lib/python3.9/dist-packag
 
       <script>
         const buttonEl =
-          document.querySelector('#df-5d263a64-eb0c-4728-ad70-a04a46ed2766 button.colab-df-convert');
+          document.querySelector('#df-c99d647c-3ea2-41fd-a8c3-32a8d708b24b button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-5d263a64-eb0c-4728-ad70-a04a46ed2766');
+          const element = document.querySelector('#df-c99d647c-3ea2-41fd-a8c3-32a8d708b24b');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -678,7 +677,7 @@ Requirement already satisfied: pycparser in /usr/local/lib/python3.9/dist-packag
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-ea7d1da0-931a-425b-8a4b-2efa4a9c53cb">
+  <div id="df-c21cdf0a-c924-4847-a4a4-a7d0131bac4e">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -706,33 +705,33 @@ Requirement already satisfied: pycparser in /usr/local/lib/python3.9/dist-packag
   <tbody>
     <tr>
       <th>0</th>
-      <td>JokoPintar2</td>
-      <td>@RealKebenaran @ilhampurnama887 Aki maruf bert...</td>
-      <td>NaN</td>
+      <td>opsimediatv</td>
+      <td>Sandiaga Uno Positif Pindah ke Partai Persatua...</td>
+      <td>Jl. Tebet Barat Dalam 1G No. 7</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>Beritasatu</td>
-      <td>Sandiaga Uno Disebut Positif Pindah ke PPP, Ta...</td>
-      <td>Jakarta</td>
+      <td>opsihukum</td>
+      <td>Sandiaga Uno Positif Pindah ke Partai Persatua...</td>
+      <td>Jl. Tebet Barat Dalam 1G No. 7</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>is_pelssy</td>
-      <td>Salut bang sandi berani keluar dari zona nyama...</td>
-      <td>Indonesia</td>
+      <td>detikcom</td>
+      <td>Wakil Ketua Dewan Pembina Partai Gerindra Sand...</td>
+      <td>Jakarta, Indonesia</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>AyuPenari</td>
-      <td>Sandiaga Uno Beri Santri Ponpes Nurul Huda Ast...</td>
-      <td>Semanu, Indonesia</td>
+      <td>CNNIDdaily</td>
+      <td>Ketua umum Partai Gerindra, Prabowo Subianto m...</td>
+      <td>Indonesia</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>mediabantencom</td>
-      <td>Hadapi Ancaman Resesi 2023, Ini Strategi Sandi...</td>
-      <td>Kota Serang, Provinsi Banten</td>
+      <td>Ajebah01</td>
+      <td>Sandiaga Uno hengkang, Prabowo santuy aja kykn...</td>
+      <td>NaN</td>
     </tr>
     <tr>
       <th>...</th>
@@ -742,39 +741,39 @@ Requirement already satisfied: pycparser in /usr/local/lib/python3.9/dist-packag
     </tr>
     <tr>
       <th>497</th>
-      <td>TiaraAnstsyaa</td>
-      <td>Habiburokhman mengungkapkan isi pertemuan Ketu...</td>
-      <td>Jakarta</td>
+      <td>tvOneNews</td>
+      <td>Gara-gara Batal Jadi Tuan Rumah Piala Dunia U2...</td>
+      <td>Pulo Gadung</td>
     </tr>
     <tr>
       <th>498</th>
-      <td>TiaraAnstsyaa</td>
-      <td>Prabowo Subianto Bertemu Sandiaga Uno di Kemha...</td>
-      <td>Jakarta</td>
+      <td>wjtodaycom</td>
+      <td>Batal Jadi Tuan Rumah Piala Dunia U-20 2023, S...</td>
+      <td>West Java, Indonesia</td>
     </tr>
     <tr>
       <th>499</th>
-      <td>ObengPlus759569</td>
-      <td>Berbeda dengan Eric Tohir Sandiaga Uno unggah ...</td>
-      <td>NaN</td>
+      <td>WaspadaOnline</td>
+      <td>Menteri Sandiaga Uno Bincang-bincang Seputar F...</td>
+      <td>Medan</td>
     </tr>
     <tr>
       <th>500</th>
-      <td>ObengPlus759569</td>
-      <td>Berbeda dengan Eric Tohir Sandiaga Uno unggah ...</td>
+      <td>kumparan</td>
+      <td>"Minimal dampaknya itu mencapai Rp 3,7 triliun...</td>
       <td>NaN</td>
     </tr>
     <tr>
       <th>501</th>
-      <td>TiaraAnstsyaa</td>
-      <td>Wakil Ketua Umum Partai Gerindra Habiburokhman...</td>
-      <td>Jakarta</td>
+      <td>linarchdoandrew</td>
+      <td>Makin kesini liat pak prabowo, sandiaga uno ko...</td>
+      <td>Jakarta, Indonesia.</td>
     </tr>
   </tbody>
 </table>
 <p>502 rows × 3 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-ea7d1da0-931a-425b-8a4b-2efa4a9c53cb')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-c21cdf0a-c924-4847-a4a4-a7d0131bac4e')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
         
@@ -825,12 +824,12 @@ Requirement already satisfied: pycparser in /usr/local/lib/python3.9/dist-packag
 
       <script>
         const buttonEl =
-          document.querySelector('#df-ea7d1da0-931a-425b-8a4b-2efa4a9c53cb button.colab-df-convert');
+          document.querySelector('#df-c21cdf0a-c924-4847-a4a4-a7d0131bac4e button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-ea7d1da0-931a-425b-8a4b-2efa4a9c53cb');
+          const element = document.querySelector('#df-c21cdf0a-c924-4847-a4a4-a7d0131bac4e');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
