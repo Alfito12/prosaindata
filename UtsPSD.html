@@ -162,6 +162,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="crawlingpta.html">Crawling data Website https://pta.trunojoyo.ac.id/</a></li>
 <li class="toctree-l1"><a class="reference internal" href="crawlingtwitter.html">CRAWLING TWITTER</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Graph.html">Tugas Pagerank</a></li>
+<li class="toctree-l1"><a class="reference internal" href="topicmodeling.html">Topic Modeling Using LSA</a></li>
 </ul>
 
     </div>
@@ -400,7 +401,7 @@ document.write(`
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-f429fcde-73cf-46d6-b7b1-f8cd0c01eb04">
+  <div id="df-f89f232c-2f51-462f-b824-709a2cf81bcb">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -496,7 +497,7 @@ document.write(`
 </table>
 <p>805 rows × 3 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-f429fcde-73cf-46d6-b7b1-f8cd0c01eb04')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-f89f232c-2f51-462f-b824-709a2cf81bcb')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
         
@@ -547,12 +548,12 @@ document.write(`
 
       <script>
         const buttonEl =
-          document.querySelector('#df-f429fcde-73cf-46d6-b7b1-f8cd0c01eb04 button.colab-df-convert');
+          document.querySelector('#df-f89f232c-2f51-462f-b824-709a2cf81bcb button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-f429fcde-73cf-46d6-b7b1-f8cd0c01eb04');
+          const element = document.querySelector('#df-f89f232c-2f51-462f-b824-709a2cf81bcb');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -587,7 +588,7 @@ document.write(`
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-9d05a9ec-821f-43c7-8303-c27114d37217">
+  <div id="df-7dcb5661-9bfa-4d7c-bab3-0630b1d9639e">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -659,7 +660,7 @@ document.write(`
 </table>
 <p>805 rows × 1 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-9d05a9ec-821f-43c7-8303-c27114d37217')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-7dcb5661-9bfa-4d7c-bab3-0630b1d9639e')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
         
@@ -710,12 +711,12 @@ document.write(`
 
       <script>
         const buttonEl =
-          document.querySelector('#df-9d05a9ec-821f-43c7-8303-c27114d37217 button.colab-df-convert');
+          document.querySelector('#df-7dcb5661-9bfa-4d7c-bab3-0630b1d9639e button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-9d05a9ec-821f-43c7-8303-c27114d37217');
+          const element = document.querySelector('#df-7dcb5661-9bfa-4d7c-bab3-0630b1d9639e');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -760,7 +761,7 @@ document.write(`
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-5d9c98ff-6115-42b0-8563-53a607b4b905">
+  <div id="df-be78840a-1864-4575-990e-4799fb0ca346">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -832,7 +833,7 @@ document.write(`
 </table>
 <p>805 rows × 1 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-5d9c98ff-6115-42b0-8563-53a607b4b905')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-be78840a-1864-4575-990e-4799fb0ca346')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
         
@@ -883,12 +884,12 @@ document.write(`
 
       <script>
         const buttonEl =
-          document.querySelector('#df-5d9c98ff-6115-42b0-8563-53a607b4b905 button.colab-df-convert');
+          document.querySelector('#df-be78840a-1864-4575-990e-4799fb0ca346 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-5d9c98ff-6115-42b0-8563-53a607b4b905');
+          const element = document.querySelector('#df-be78840a-1864-4575-990e-4799fb0ca346');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -924,11 +925,9 @@ document.write(`
 </div>
 <div class="cell_output docutils container">
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[nltk_data] Downloading package stopwords to /root/nltk_data...
-[nltk_data]   Unzipping corpora/stopwords.zip.
+[nltk_data]   Package stopwords is already up-to-date!
 [nltk_data] Downloading package punkt to /root/nltk_data...
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[nltk_data]   Unzipping tokenizers/punkt.zip.
+[nltk_data]   Package punkt is already up-to-date!
 </pre></div>
 </div>
 </div>
@@ -982,23 +981,18 @@ document.write(`
 <span class="g g-Whitespace">      </span><span class="mi">9</span>         <span class="k">if</span> <span class="n">words_filtered</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="ow">in</span> <span class="n">slang_dict</span><span class="p">:</span>
 
 <span class="nn">/usr/local/lib/python3.10/dist-packages/nltk/corpus/reader/wordlist.py</span> in <span class="ni">words</span><span class="nt">(self, fileids, ignore_lines_startswith)</span>
-<span class="g g-Whitespace">     </span><span class="mi">19</span>         <span class="k">return</span> <span class="p">[</span>
+<span class="g g-Whitespace">     </span><span class="mi">17</span> 
+<span class="g g-Whitespace">     </span><span class="mi">18</span>     <span class="k">def</span> <span class="nf">words</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fileids</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">ignore_lines_startswith</span><span class="o">=</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">):</span>
+<span class="ne">---&gt; </span><span class="mi">19</span>         <span class="k">return</span> <span class="p">[</span>
 <span class="g g-Whitespace">     </span><span class="mi">20</span>             <span class="n">line</span>
-<span class="nn">---&gt; 21             for line</span> in <span class="ni">line_tokenize(self.raw</span><span class="nt">(fileids))</span>
-<span class="g g-Whitespace">     </span><span class="mi">22</span>             <span class="k">if</span> <span class="ow">not</span> <span class="n">line</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="n">ignore_lines_startswith</span><span class="p">)</span>
+<span class="nn">     21             for line</span> in <span class="ni">line_tokenize(self.raw</span><span class="nt">(fileids))</span>
+
+<span class="nn">/usr/local/lib/python3.10/dist-packages/nltk/corpus/reader/wordlist.py</span> in <span class="ni">&lt;listcomp&gt;</span><span class="nt">(.0)</span>
+<span class="g g-Whitespace">     </span><span class="mi">20</span>             <span class="n">line</span>
+<span class="nn">     21             for line</span> in <span class="ni">line_tokenize(self.raw</span><span class="nt">(fileids))</span>
+<span class="ne">---&gt; </span><span class="mi">22</span>             <span class="k">if</span> <span class="ow">not</span> <span class="n">line</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="n">ignore_lines_startswith</span><span class="p">)</span>
 <span class="g g-Whitespace">     </span><span class="mi">23</span>         <span class="p">]</span>
-
-<span class="nn">/usr/local/lib/python3.10/dist-packages/nltk/tokenize/simple.py</span> in <span class="ni">line_tokenize</span><span class="nt">(text, blanklines)</span>
-<span class="g g-Whitespace">    </span><span class="mi">135</span> 
-<span class="g g-Whitespace">    </span><span class="mi">136</span> <span class="k">def</span> <span class="nf">line_tokenize</span><span class="p">(</span><span class="n">text</span><span class="p">,</span> <span class="n">blanklines</span><span class="o">=</span><span class="s2">&quot;discard&quot;</span><span class="p">):</span>
-<span class="ne">--&gt; </span><span class="mi">137</span>     <span class="k">return</span> <span class="n">LineTokenizer</span><span class="p">(</span><span class="n">blanklines</span><span class="p">)</span><span class="o">.</span><span class="n">tokenize</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
-
-<span class="nn">/usr/local/lib/python3.10/dist-packages/nltk/tokenize/simple.py</span> in <span class="ni">tokenize</span><span class="nt">(self, s)</span>
-<span class="g g-Whitespace">    </span><span class="mi">114</span>         <span class="c1"># If requested, strip off blank lines.</span>
-<span class="g g-Whitespace">    </span><span class="mi">115</span>         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_blanklines</span> <span class="o">==</span> <span class="s2">&quot;discard&quot;</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">116</span>             <span class="n">lines</span> <span class="o">=</span> <span class="p">[</span><span class="n">l</span> <span class="k">for</span> <span class="n">l</span> <span class="ow">in</span> <span class="n">lines</span> <span class="k">if</span> <span class="n">l</span><span class="o">.</span><span class="n">rstrip</span><span class="p">()]</span>
-<span class="g g-Whitespace">    </span><span class="mi">117</span>         <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">_blanklines</span> <span class="o">==</span> <span class="s2">&quot;discard-eof&quot;</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">118</span>             <span class="k">if</span> <span class="n">lines</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">lines</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">():</span>
+<span class="g g-Whitespace">     </span><span class="mi">24</span> 
 
 <span class="ne">KeyboardInterrupt</span>: 
 </pre></div>
